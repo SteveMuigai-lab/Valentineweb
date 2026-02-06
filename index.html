@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg-animated" aria-hidden="true"></div>
+  <div id="hearts-layer" aria-hidden="true"></div>
+
+  <!-- Main -->
+  <main class="stage">
+    <section class="card glass-card animate-pulse-glow" role="dialog" aria-labelledby="title" aria-describedby="desc">
+      <div class="badge" aria-hidden="true">💌</div>
+
+      <h1 id="title" class="title gradient-text">Will you be my Valentine?</h1>
+      <p id="desc" class="subtitle">I made this just for you. Choose wisely 😄</p>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="actions" id="actions">
+        <button id="yesBtn" class="btn btn-primary animate-heartbeat" type="button">
+          Yes 💖
+        </button>
+
+        <button id="noBtn" class="btn btn-ghost" type="button">
+          No 🙈
+        </button>
+      </div>
+
+      <div class="message" id="message" aria-live="polite"></div>
+
+      <!-- Love message panel (hidden until YES) -->
+      <div class="love-note" id="loveNote" hidden>
+        <div class="love-top">
+          <div class="love-icon" aria-hidden="true">💖</div>
+          <h2 class="note-title">My Valentine 💖 💌</h2>
+        </div>
+
+        <p class="note-text" id="noteText"></p>
+
+        <div class="love-sparkles" aria-hidden="true">
+          <span>✨</span><span>💞</span><span>✨</span><span>🌹</span><span>✨</span>
+        </div>
+      </div>
+
+      <!-- Confetti/burst layer -->
+      <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
+      <footer class="footer">
+        <span class="hint">Tip: Try clicking “No” 😅</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
